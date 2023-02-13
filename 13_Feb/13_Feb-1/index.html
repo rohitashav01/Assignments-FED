@@ -1,0 +1,54 @@
+<!--Changing Background Images Using KeyFrames-->
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+
+div {
+  width:80vw;
+  height:500px;
+  position: relative;
+  animation: myanim 10s infinite;
+}
+
+
+@keyframes myanim {
+  0%{
+    top: 0px;
+   }
+   25%{
+    top: 20px;
+    left:15px;
+    background: url("fed4.jpg");
+    background-position: center center;
+   }
+   50%{
+    top: 40px;
+    left:30px;
+    background:url("dog.jpg"); 
+    background-position: center center;
+   }
+   75%{
+    top: 60px;
+    left:45px;
+    background: url("fed4.jpg");
+    background-position: center center;
+   }
+   100%{
+    top: 80px;
+    left:65px;
+    background:url("wall.jpg");
+   }
+
+}
+</style>
+</head>
+<body>
+
+<h1>Changing Background Images of div using keyframes</h1>
+<div>
+   
+</div>
+
+</body>
+</html>
