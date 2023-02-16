@@ -10,63 +10,33 @@
     <script>
         $(document).ready(function(){
                     //for append
-                    $(".btn").click(function(){
-                    $(".1").appendTo(".container2");
-                    $(".btn").click(function(){
-                    $(".2").appendTo(".container2"); 
-                    $(".btn").click(function(){
-                    $(".3").appendTo(".container2"); 
-                    $(".btn").click(function(){
-                    $(".4").appendTo(".container2");
-                    $(".btn").click(function(){
-                    $(".5").appendTo(".container2");
-                    $(".btn").click(function(){
-                    $(".6").appendTo(".container2");
-                    $(".btn").click(function(){
-                    $(".7").appendTo(".container2");
-                    $(".btn").click(function(){
-                    $(".8").appendTo(".container2");       
-                    }); }); }); }); }); });  });  }); 
-
+                    $("P").click(function(){
+                        $(this).hasClass(".container1");
+                        $(this).appendTo(".container2");
+                    });
                     //for prepend
-                    $(".btn2").click(function(){
-                    $(".1").prependTo(".container1");
-                    $(".btn2").click(function(){
-                    $(".2").prependTo(".container1"); 
-                    $(".btn2").click(function(){
-                    $(".3").prependTo(".container1"); 
-                    $(".btn2").click(function(){
-                    $(".4").prependTo(".container1");
-                    $(".btn2").click(function(){
-                    $(".5").prependTo(".container1");
-                    $(".btn2").click(function(){
-                    $(".6").prependTo(".container1");
-                    $(".btn2").click(function(){
-                    $(".7").prependTo(".container1");
-                    $(".btn2").click(function(){
-                    $(".8").prependTo(".container1");       
-                    }); }); }); }); }); });  });  }); 
+                    $("P").click(function(){
+                        $(this).hasClass(".container2");
+                        $(this).prependTo(".container1");
+                    });
+                   
         })
     </script>
 </head>
 <body>
     <div class="container">
         <div class="container1">
-            <button class="btn">Append</button> 
-            <ul>
-                <li class="1">John</li>  
-                <li class="2">Doe</li>  
-                <li class="3">Tim</li>
-                <li class="4">Mathew</li>
-                <li class="5">Roger</li>
-                <li class="6">Binny</li>
-                <li class="7">Matt</li>
-                <li class="8">Max</li>   
-            </ul>
-           
+                <p>John</p>  
+                <p>Doe</p>  
+                <p>Tim</p>
+                <p>Mathew</p>
+                <p>Roger</p>
+                <p>Binny</p>
+                <p>Matt</p>
+                <p>Max</p>   
         </div>
         <div class="container2">
-            <button class="btn2">Prepend</button>
+            
         </div>
     </div>
 </body>
