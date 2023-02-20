@@ -5,7 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    
     <title>Document</title>
+    <script>
+        $(document).ready(function(){
+            // Open Popup
+         $('.btn').on('click', function(){
+            $('.popup').fadeIn();
+            
+            
+        });
+        // Close Popup
+        $('.closeBtn').on('click', function(){
+            $('.popup').fadeOut();  
+        });
+        // Close Popup when Click outside
+        $('.popup').on('click', function(){
+            $('.popup').fadeOut();
+        }).children().click(function () {
+            return false;
+        });
+        })
+    </script>
 </head>
 <body>
     <header>
@@ -19,25 +41,52 @@
         </nav>
     </header>
     <section class="data">
-        <form action="script.js" class="main-form">
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                <label for="country">Email</label>
-                <input type="text" id="email" name="Email" placeholder="Your email..">
-                <label for="birthday">Birthday:</label>
-                <input type="date" id="birthday" name="birthday">
-                <label for="gender">Gender:</label>
-                <input type="checkbox" id="gender" name="genderM" value="Male"> Male 
-                <input type="checkbox" id = "gender" name="genderF" value="Female"> Female<br>
-                <label for="interests">Interests:</label>
-                <input type="checkbox" name="interest1" value=" "> Gaming
-                <input type="checkbox" name="interest2" value=" "> Coding
-                <input type="checkbox" name="interest3" value=" "> Sports
-                <input type="checkbox" name="interest4" value=" "> Riding
-                <input type="checkbox" name="interest5" value=" "> Trekking
-                <input type="submit" value="Submit">
+        <form  class="main-form">
+            <div>
+                <label for="fname" class="required">First Name</label>
+                <input type="text" name="firstname" class="require" placeholder="Your name.." >
+            </div>
+            <div>
+                <label for="lname" class="required">Last Name</label>
+                <input type="text" name="lastname" class="require" placeholder="Your last name.." >
+            </div>    
+            <div>
+                <label for="country" class="required">Email</label>
+                <input type="text" name="Email" class="require" placeholder="Your email.." >
+            </div>
+            <div>
+                <label for="birthday" class="required">Birthday:</label>
+                <input type="date"  name="birthday"  class="require" >
+            </div>
+            <div>
+                <label for="gender" class="required">Gender:</label>
+                <input type="checkbox"  name="genderM"  class="require" value="Male" > Male 
+                <input type="checkbox"  name="genderF" class="require" value="Female" > Female<br>
+            </div>
+            <div>
+                <label for="interests" class="required">Interest:</label>
+                <input type="checkbox"  name="interest1" class="require" value="Sports" > Sports
+                <input type="checkbox"  name="interest2" class="require" value="Gaming" > Gaming 
+                <input type="checkbox"  name="interest3" class="require"  value="Trekking" > Trekking 
+                <input type="checkbox"  name="interest4" class="require" value="Reading" > Reading  
+                   
+            </div>
+            
+            <input type="reset" value="Reset" role="button" tabindex="0"  id ="reset"> 
+            <div class="popup">
+                <div class="popup-content">
+                    <h2>Popup Title</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                    laborum.</p>
+                    <a class="closeBtn" href="javascript:void(0)">x</a>
+                </div>
+                
+            </div>
+            <button class="btn">Submit</button>
+        
             
         </form>
         <footer>
@@ -46,5 +95,7 @@
             </div>
         </footer>
     </section>
+    
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
