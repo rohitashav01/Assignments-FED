@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        window.addEventListener("DOMContentLoaded", (event) => {
+      let buttons = document.querySelectorAll("#accordion button");
+      buttons.forEach((button) => {
+        let content = button.nextElementSibling;
+        button.addEventListener("click", (event) => {
+          if (button.classList.contains("active")) {
+            button.classList.remove("active");
+            button.setAttribute("aria-expanded", false);
+            content.style.maxHeight = null;
+            content.setAttribute("aria-hidden", true);
+          } else {
+            button.classList.add("active");
+            button.setAttribute("aria-expanded", true);
+            content.style.maxHeight = content.scrollHeight + "px";
+            content.setAttribute("aria-hidden", false);
+          }
+        });
+      });
+    });
+    </script>
+</head>
+
+<body>
+    <ul id="accordion">
+        <li>
+          <button aria-controls="content-1" aria-expanded="false" id="accordion-control-1">FAQ 1</button>
+          <div class="acc-item-content" aria-hidden="true" id="content-1">
+            <p>Answer 1!</p>
+          </div>
+        </li>
+        <li>
+          <button aria-controls="content-2" aria-expanded="false" id="accordion-control-2">FAQ 2</button>
+          <div class="acc-item-content" aria-hidden="true" id="content-2">
+            <p>Answer 2</p>
+          </div>
+        </li>
+        <li>
+          <button aria-controls="content-3" aria-expanded="false" id="accordion-control-3">FAQ 3</button>
+          <div class="acc-item-content" aria-hidden="true" id="content-3">
+            <p>Answer 3</p>
+          </div>
+        </li>
+        <li>
+          <button aria-controls="content-4" aria-expanded="false" id="accordion-control-4">FAQ 4 </button>
+          <div class="acc-item-content" aria-hidden="true" id="content-4">
+            <p>Answer 4</p>
+          </div>
+        </li>
+        <li>
+          <button aria-controls="content-5" aria-expanded="false" id="accordion-control-5">FAQ 5</button>
+          <div class="acc-item-content" aria-hidden="true" id="content-5">
+            <p>Answer 5</p>
+          </div>
+        </li>
+      </ul>
+</body>
+
+</html>

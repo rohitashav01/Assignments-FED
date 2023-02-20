@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th scope="col">Employee Code</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">Designation</th>
+                    <th scope="col">Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Patrick</th>
+                    <td>6111</td>
+                    <td>31</td>
+                    <td>Python</td>
+                    <td>Developer</td>
+                    <td>30K</td>
+                </tr>
+                <tr>
+                    <th scope="row">Neil</th>
+                    <td>6112</td>
+                    <td>25</td>
+                    <td>FED</td>
+                    <td>Developer</td>
+                    <td>32K</td>
+                </tr>
+                <tr>
+                    <th scope="row">Morris</th>
+                    <td>6981</td>
+                    <td>36</td>
+                    <td>PHP</td>
+                    <td>Sr.Developer</td>
+                    <td>90K</td>
+                </tr>
+                <tr>
+                    <th scope="row">John</th>
+                    <td>8216</td>
+                    <td>40</td>
+                    <td>Python</td>
+                    <td>Sr. Technical Project Manager</td>
+                    <td>90K</td>
+                </tr>
+                <tr>
+                    <th scope="row">Max</th>
+                    <td>9116</td>
+                    <td>35</td>
+                    <td>Database</td>
+                    <td>Database Administrator</td>
+                    <td>70K</td>
+                </tr>
+
+            </tbody>   
+        </table>
+    </div>
+
+
+    <!-- pop-up dialog box, containing a form -->
+<dialog id="favDialog">
+    <p> This is the dialoag box with the accessibility concept.</p>
+
+    <p>Always write HTML code with accessibility in mind!</p>
+    <p>Provide the user a good way to navigate and interact with your site. Make your HTML code as semantic as possible.</p>
+    <p>Please contact if have any query:</p>
+    <p id="telephone"  aria-label="teli">+91 98217485585</p>
+        <button id="close" aria-label="close">&times;</button>
+</div>
+  </dialog>
+  
+  <div>
+    <button id="updateDetails">Read More</button>
+  </div>
+</body>
+<script>
+    const updateButton = document.getElementById("updateDetails");
+const cancelButton = document.getElementById("close");
+const dialog = document.getElementById("favDialog");
+dialog.returnValue = "favAnimal";
+
+function openCheck(dialog) {
+  if (dialog.open) {
+    console.log("Dialog open");
+  } else {
+    console.log("Dialog closed");
+  }
+}
+
+// Update button opens a modal dialog
+updateButton.addEventListener("click", () => {
+  dialog.showModal();
+  openCheck(dialog);
+});
+
+// Form cancel button closes the dialog box
+cancelButton.addEventListener("click", () => {
+  dialog.close("animalNotChosen");
+  openCheck(dialog);
+});
+</script>
+</html>

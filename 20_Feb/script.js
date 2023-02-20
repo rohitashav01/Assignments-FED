@@ -1,24 +1,30 @@
-/*
-const submitButton = document.getElementById('submitB');
-const input = document.getElementsByClassName('require');
 
-if (input === ''){
-    submitButton.disabled=true;
-}
-else{
-    for(let i=0; i<input.length;i++){
-        input[i].addEventListener("keyup",(e) => {
-            const value=e.currentTarget.value;
-            submitButton.disabled= false;
-            //if (value === ""){
-                //submitButton.disabled=true;
-            //}
-        });
-    }
-       
-}
-*/
+const submitButton = document.getElementById('btn');
+const input = document.getElementsByClassName('require1','require2','require3');
 
+for(let i=0; i<input.length;i++){
+    input[i].addEventListener("change",(e) => {
+        console.log(e.currentTarget.value)
+        const value=e.currentTarget.value;
+        submitButton.disabled= false;
+        if (value === ""){
+            submitButton.disabled=true;
+        }
+    });       
+}
+
+const inputs = document.getElementsByClassName('requires1','requires2','requires3');
+
+for(let i=0; i<inputs.length;i++){
+    inputs[i].addEventListener("change",(e) => {
+        console.log(e.currentTarget.value)
+        const value=e.currentTarget.value;
+        submitButton.disabled= false;
+        if (value === ""){
+            submitButton.disabled=true;
+        }
+    });       
+}
 /*
 
 let inputs = document.getElementsByClassName('require'); // Enter your class name for a required field, this should also be reflected within your form fields.
@@ -33,15 +39,3 @@ break;
 }
 btn.disabled = !isValid;
 */
-function showTable() {
-    $('.popup').hide();
-    localStorage.setItem('hide', 'true'); //store state in localStorage
-}
-
-$(document).ready(function(){
-    var hide = localStorage.getItem('hide');
-    if(hide === 'true'){
-         
-    }
-});
-
