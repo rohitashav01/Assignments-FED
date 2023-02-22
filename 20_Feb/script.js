@@ -1,5 +1,4 @@
-
-const submitButton = document.getElementById('btn');
+/*
 const input = document.getElementsByClassName('require1','require2','require3');
 
 for(let i=0; i<input.length;i++){
@@ -25,6 +24,7 @@ for(let i=0; i<inputs.length;i++){
         }
     });       
 }
+*/
 /*
 
 let inputs = document.getElementsByClassName('require'); // Enter your class name for a required field, this should also be reflected within your form fields.
