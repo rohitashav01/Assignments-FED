@@ -68,45 +68,45 @@
 
 
     <!-- pop-up dialog box, containing a form -->
-<dialog id="favDialog">
-    <p> This is the dialoag box with the accessibility concept.</p>
-
-    <p>Always write HTML code with accessibility in mind!</p>
-    <p>Provide the user a good way to navigate and interact with your site. Make your HTML code as semantic as possible.</p>
-    <p>Please contact if have any query:</p>
-    <p id="telephone"  aria-label="teli">+91 98217485585</p>
-        <button id="close" aria-label="close">&times;</button>
-</div>
+  <dialog id="favDialog">
+    <p> Hello and welcome to the dialog box</p>
+    <p>Accessibility concept is important to be used in the websites</p>
+    <p>So that the user with disabilities and those who want to navigate the website through the keyboard can access it.</p>
+    <p> Contact if you have any doubts:</p>
+    <p id="telephone"  aria-label="teli">+(10)-365-7654</p>
+    <button id="close" aria-label="close">&times;</button>
   </dialog>
   
   <div>
     <button id="updateDetails">Read More</button>
   </div>
+
 </body>
+
 <script>
-    const updateButton = document.getElementById("updateDetails");
-const cancelButton = document.getElementById("close");
-const dialog = document.getElementById("favDialog");
-dialog.returnValue = "favAnimal";
+      const updateButton = document.getElementById("updateDetails");
+      const cancelButton = document.getElementById("close");
+      const dialog = document.getElementById("favDialog");
+      dialog.returnValue = "favAnimal";
 
-function openCheck(dialog) {
-  if (dialog.open) {
-    console.log("Dialog open");
-  } else {
-    console.log("Dialog closed");
-  }
-}
+      function openCheck(dialog) {
+        if (dialog.open) {
+        console.log("Dialog open");
+        } else {
+          console.log("Dialog closed");
+        }
+      }
 
-// Update button opens a modal dialog
-updateButton.addEventListener("click", () => {
-  dialog.showModal();
-  openCheck(dialog);
-});
+    // Update button opens a modal dialog
+    updateButton.addEventListener("click", () => {
+    dialog.showModal();
+    openCheck(dialog);
+    });
 
-// Form cancel button closes the dialog box
-cancelButton.addEventListener("click", () => {
-  dialog.close("animalNotChosen");
-  openCheck(dialog);
-});
+    // Form cancel button closes the dialog box
+    cancelButton.addEventListener("click", () => {
+    dialog.close("animalNotChosen");
+    openCheck(dialog);
+  });
 </script>
 </html>
